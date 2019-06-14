@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend>Kiem Tra Cuoc Goi Dien Thoai</legend>
+        Thoi Gian Goi(phut) <br><br>
+        <input type="text" id="SoPhut"><br><br>
+        Cuoc phi/phut <br><br>
+        <input type="text" id="Cuoc"><br><br>
+        <input type="button" onclick="Tinh()" value="Kiem Tra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function Tinh() {
+        let a = document.getElementById('SoPhut').value;
+        let b = document.getElementById('Cuoc').value;
+        let res;
+        let money = a * b;
+        if (money > 1000000) {
+            res = 'Thang nay goi nhieu';
+        } else if (money > 500000) {
+            res = 'thang nay goi binh thuong';
+        } else {
+            res = ' thang nay goi it';
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>
