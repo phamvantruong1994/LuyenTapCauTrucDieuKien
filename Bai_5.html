@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-left: 300px;margin-top: 400px;margin-top: 300px">
+    <fieldset>
+        <legend>Kiem Tra Hoc Luc</legend>
+        <input type="text" id="DiemGiuaKy"><br><br>
+        <input type="text" id="DiemCuoiKy"><br><br>
+        <input type="button" onclick="Tinh()" value="KiemTra">
+    </fieldset>
+</form>
+<b id="res"></b>
+<script>
+    function Tinh() {
+        let res;
+        let a = parseInt(document.getElementById('DiemGiuaKy').value);
+        let b = parseInt(document.getElementById('DiemCuoiKy').value);
+        let arg = (a + b) / 2;
+        if (arg > 8) {
+            res = 'hoc sinh gioi';
+        } else if (arg > 6) {
+            res = 'hoc sinh kha';
+        } else {
+            res = 'hoc sinh trung binh';
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>

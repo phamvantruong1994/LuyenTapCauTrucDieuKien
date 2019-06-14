@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-top: 300px;margin-left: 300px;margin-right: 400px">
+    <fieldset>
+        <legend>Kiem Tra Hoa Hong</legend>
+        Doanh So <br><br>
+        <input type="text" id="doanhthu"><br><br>
+        Hoa Hong %<br><br>
+        <input type="text" id="hoahong" min="0" max="100"><br><br>
+        <input type="button" onclick="Tinh()" value="KiemTra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function Tinh() {
+        let res;
+        let a = document.getElementById('doanhthu').value;
+        let b = document.getElementById('hoahong').value;
+        let money = b / 100 * a;
+        if (b > 80) {
+            res = 'hoa hoang cao';
+        } else if (b > 60) {
+            res = 'hoa hong trung binh';
+        } else {
+            res = 'hoa hong thap';
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>

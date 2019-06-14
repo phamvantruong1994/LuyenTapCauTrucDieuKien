@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 300px;margin-left: 400px;margin-top: 300px">
+    <fieldset>
+        <legend>Kiem Tra So Lon Hon Hay Nho Hon 0</legend>
+        Nhap So <br>
+        <input type="text" id="NhapSo">
+        <input type="button" onclick="KiemTra()" value="Click">
+    </fieldset>
+</form>
+<b id =res></b>
+<script>
+    function KiemTra() {
+        let res;
+        let number = document.getElementById('NhapSo').value;
+        if (number>0){
+            res = 'lon hon 0';
+        } else {
+            res = 'nho hon 0';
+        }
+
+        document.getElementById('res').innerHTML =res;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-top: 300px;margin-left: 400px;margin-left: 300px">
+    <fieldset>
+        <legend>
+            Kiem Tra So Lon Nhat
+        </legend>
+        <br>
+        Nhap So <br>
+        <input type="text" id="number1"><br><br>
+        <input type="text" id="number2"><br><br>
+        <input type="text" id="number3"><br><br>
+        <input type="button" onclick="KiemTra()" value="CLick">
+    </fieldset>
+</form>
+<b id="res"></b>
+<script>
+    function KiemTra() {
+        let res;
+        let a = parseInt(document.getElementById('number1').value);
+        let b = parseInt(document.getElementById('number2').value);
+        let c = parseInt(document.getElementById('number3').value);
+        if (a > b) {
+            if (a > c) {
+                res = 'a la so lon nhat';
+            } else {
+                res = 'c la so lon nhat';
+            }
+        else
+            {
+
+                if (b > c) {
+                    res = 'c la so lon nhat';
+                } else {
+                    res = 'b la so lon nhat';
+                }
+            }
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>
